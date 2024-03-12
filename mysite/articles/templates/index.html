@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'file/styles.css'%}">
+  <title>Your Website</title>
+</head>
+<body>
+  <header>
+    <h1>Your Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="title">Welcome to our website!</h2>
+      <p>This is a simple example of HTML and CSS layout.</p>
+    </section>
+
+    <section>
+      <h2>Articles</h2>
+      <div style="font-size: 22px; margin-left: 20px;" class="pages">
+        {% block content %}
+        <article>
+          <h3>Interesting Fact 1</h3>
+        
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt, libero non dignissim tristique, lorem ipsum placerat orci, id commodo arcu erat eu nunc. Fusce dapibus est nec augue.</p>
+        </article>
+        {% endblock%}
+      </div>
+      <img src="{% static 'img/photo.png' %}" alt="Fact 1 Image">
+      <!-- Добавьте другие статьи с изображениями по аналогии -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

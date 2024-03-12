@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'file/base.css' %}">
+</head>
+<body>
+    <div class="menu">
+        <div class="menurl">
+            <a href="#" class="menuwords">Статьи</a>
+            <a href="#" class="menuwords">Ресурсы</a>
+            <a href="#" class="menuwords">Курсы</a>
+            <a href="#" class="menuwords">Контакт</a>
+            <a href="#" class="menuwords">О нас</a>
+        
+    </div>
+    </div>
+    <div class="con">
+     
+        <div style="margin-top: 5em; border-radius: 10px; font-size: 20px; letter-spacing: 1px; padding: 2em; box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);" class="content">
+            {% block content%}
+           
+           {% endblock %}
+        </div>
+        
+         </div>
+
+         <footer>
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+          </footer>
+
+</body>
+</html>
+<!-- страница Статьи -->

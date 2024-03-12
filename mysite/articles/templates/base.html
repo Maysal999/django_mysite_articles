@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'file/main.css' %}">
+</head>
+<body>
+    <div class="menu">
+        <div class="menurl">
+            <a href="#" class="menuwords">Статьи</a>
+            <a href="#" class="menuwords">Ресурсы</a>
+            <a href="#" class="menuwords">Курсы</a>
+            <a href="#" class="menuwords">Контакт</a>
+            <a href="#" class="menuwords">О нас</a>
+        
+    </div>
+ 
+     </div>
+     <div class="con">
+     
+        <div class="content">{% block content%}
+           {% endblock %}</div>
+        
+         </div>
+</body>
+</html>
+<!-- главный страница -->

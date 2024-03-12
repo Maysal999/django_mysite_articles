@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block title%}test {% endblock %}
+
+{% block content%}
+  {% if article5 %}
+        {% for a in article5 %}
+        <div class="urladdress"><a href="{% url 'detail' a.id %}">{{a.article_name}}</a></div>
+        {% endfor%}
+  {% else %}
+       стаятья не найдено
+  {% endif %}
+{% endblock %}
